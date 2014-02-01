@@ -1,0 +1,24 @@
+﻿@model TestingDataAnnotationProject.Models.MyClass
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.EditorForModel()
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+
+    <script src="~/Scripts/PrimeNumberOnlyValidation.js"></script>
+}
